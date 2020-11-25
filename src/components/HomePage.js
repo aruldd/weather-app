@@ -1,20 +1,44 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-const HomePage = () => {
+import { connect } from 'react-redux';
+import { getFormattedDateFromTS } from '../utils/dates';
+import { WeatherCard } from './WeatherCard';
+import { weatherProp } from '../types';
+import { keys } from 'lodash';
+const HomePage = (props) => {
+  const { dayWiseWeatherList, ui, dayWiseWeather } = props;
   return (
-    <div>
-      <h1>React Slingshot</h1>
-
-      <h2>Get Started</h2>
-      <ol>
-        <li>
-          Review the <Link to="/fuel-savings">demo app</Link>
-        </li>
-        <li>Remove the demo and start coding: npm run remove-demo</li>
-      </ol>
-    </div>
+    <>
+      {keys(dayWiseWeather).length
+        ? dayWiseWeather[
+            ui.date === ''
+              ? getFormattedDateFromTS(dayWiseWeatherList[0].dt, 'LL')
+              : ui.date
+          ].map((weather, index) => {
+            return (
+              <WeatherCard key={index} weather={weather} system={ui.units} />
+            );
+          })
+        : null}
+    </>
   );
 };
 
-export default HomePage;
+HomePage.propTypes = {
+  dayWiseWeatherList: PropTypes.arrayOf(weatherProp).isRequired,
+  dayWiseWeather: PropTypes.objectOf(PropTypes.arrayOf(weatherProp)).isRequired,
+  ui: PropTypes.shape({
+    date: PropTypes.string.isRequired,
+    units: PropTypes.string.isRequired,
+  }),
+};
+
+function mapStateToProps(state) {
+  return {
+    dayWiseWeatherList: state.weather.weatherData.list,
+    dayWiseWeather: state.weather.dayWiseWeather,
+    ui: state.ui,
+  };
+}
+
+export default connect(mapStateToProps)(HomePage);

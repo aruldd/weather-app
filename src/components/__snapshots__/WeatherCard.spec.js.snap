@@ -1,0 +1,371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WeatherCard /> Should render everything with imperial units 1`] = `
+<div
+  className="bp3-card bp3-elevation-0 weather-card"
+>
+  <div
+    className="image"
+  >
+     
+    <img
+      src="https://openweathermap.org/img/wn/10d@2x.png"
+    />
+  </div>
+  <div
+    className="cell"
+  >
+    <h2
+      className="time "
+    >
+      11:30 AM
+    </h2>
+    <h4
+      className="temp"
+    >
+      25.73
+       
+      °F
+    </h4>
+    <div
+      className="description"
+    >
+      heavy intensity rain
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Feels like
+    </h2>
+    <div
+      className="value"
+    >
+      24.6
+       
+      °F
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Min/Max
+    </h2>
+    <div
+      className="value"
+    >
+      25.45
+       
+      °F
+      /
+      25.73
+       
+      °F
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Precipitation Probability
+    </h2>
+    <div
+      className="value"
+    >
+      100
+       
+      %
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Pressure
+    </h2>
+    <div
+      className="value"
+    >
+      1008
+       
+      hPa
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Humidity
+    </h2>
+    <div
+      className="value"
+    >
+      92
+       
+      %
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Wind
+    </h2>
+    <div
+      className="value"
+    >
+      Speed: 
+      10.2
+       
+      mph
+    </div>
+    <div
+      className="value"
+    >
+      Direction: 
+      30
+       
+      °
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Cloudiness
+    </h2>
+    <div
+      className="value"
+    >
+      95
+       
+      %
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Visibility
+    </h2>
+    <div
+      className="value"
+    >
+      10
+       
+      km
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<WeatherCard /> Should render everything with metric units 1`] = `
+<div
+  className="bp3-card bp3-elevation-0 weather-card"
+>
+  <div
+    className="image"
+  >
+     
+    <img
+      src="https://openweathermap.org/img/wn/10d@2x.png"
+    />
+  </div>
+  <div
+    className="cell"
+  >
+    <h2
+      className="time "
+    >
+      11:30 AM
+    </h2>
+    <h4
+      className="temp"
+    >
+      25.73
+       
+      °C
+    </h4>
+    <div
+      className="description"
+    >
+      heavy intensity rain
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Feels like
+    </h2>
+    <div
+      className="value"
+    >
+      24.6
+       
+      °C
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Min/Max
+    </h2>
+    <div
+      className="value"
+    >
+      25.45
+       
+      °C
+      /
+      25.73
+       
+      °C
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Precipitation Probability
+    </h2>
+    <div
+      className="value"
+    >
+      100
+       
+      %
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Pressure
+    </h2>
+    <div
+      className="value"
+    >
+      1008
+       
+      hPa
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Humidity
+    </h2>
+    <div
+      className="value"
+    >
+      92
+       
+      %
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Wind
+    </h2>
+    <div
+      className="value"
+    >
+      Speed: 
+      10.2
+       
+      m/s
+    </div>
+    <div
+      className="value"
+    >
+      Direction: 
+      30
+       
+      °
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Cloudiness
+    </h2>
+    <div
+      className="value"
+    >
+      95
+       
+      %
+    </div>
+  </div>
+  <div
+    className="bp3-divider"
+  />
+  <div
+    className="cell"
+  >
+    <h2>
+      Visibility
+    </h2>
+    <div
+      className="value"
+    >
+      10
+       
+      km
+    </div>
+  </div>
+</div>
+`;

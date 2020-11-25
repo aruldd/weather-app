@@ -1,13 +1,13 @@
-import CONSTANTS from './constants';
+import { API_KEY } from './constants';
 
 describe('Constants Helper', () => {
   describe('API Key', () => {
     it('check if api key is set', () => {
-      expect(CONSTANTS.API_KEY).toBeDefined();
+      expect(API_KEY).toBeDefined();
     });
 
     it('check if api key is in length', () => {
-      expect(CONSTANTS.API_KEY).toHaveLength(32);
+      expect(API_KEY).toHaveLength(32);
     });
   });
 });

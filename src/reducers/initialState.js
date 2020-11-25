@@ -12,7 +12,17 @@ export default {
     savings: {
       monthly: 0,
       annual: 0,
-      threeYear: 0
-    }
-  }
+      threeYear: 0,
+    },
+  },
+  weather: {
+    weatherData: {},
+    loading: false,
+    error: false,
+    dayWiseWeather: [],
+  },
+  ui: {
+    date: '',
+    units: 'metric',
+  },
 };

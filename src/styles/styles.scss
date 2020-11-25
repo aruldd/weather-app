@@ -2,42 +2,85 @@
 @import "~@blueprintjs/core/lib/css/blueprint.css";
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
-/* Variables */
-$vin-blue: #5bb7db;
-$vin-green: #60b044;
-$vin-red: #ff0000;
-
-/* Styles */
-body {
-  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.4em;
-  color: #4d4d4d;
-  min-width: 230px;
-  max-width: 550px;
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  font-weight: 300;
+.app-container {
+  background-color: #e5e5e5;
+  display: flex;
+  height: 100vh;
+  .sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px -2px 12px #00000012;
+    .bp3-spinner {
+      padding: 10px;
+    }
+    .bp3-callout {
+      margin-top: 10px;
+    }
+    .date-selection {
+      max-height: 300px;
+      margin: auto 0;
+    }
+  }
+  .right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 0 15px;
+  }
 }
 
-td {
-  padding: 12px;
+.city-header {
+  div,
+  h2 {
+    margin-bottom: 5px;
+  }
+  .city-name {
+    display: flex;
+  }
 }
 
-h2 {
-  color: $vin-blue;
-}
+.weather-card {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  min-width: 150px;
+  .image {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    img {
+      height: 100%;
+    }
+  }
+  .cell {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    min-width: 100px;
+    flex: 1;
+    .value {
+      font-weight: 100;
+      font-size: 1rem;
+    }
+  }
+  h2,
+  h4 {
+    margin: 0 0 5px 0;
+    font-weight: 400;
+    font-size: 1.2em;
+  }
 
-.savings {
-  color: $vin-green;
+  .description {
+    text-transform: capitalize;
+  }
 }
-.loss {
-  color: $vin-red;
-}
-input.small {
-  width: 46px;
-}
-td.fuel-savings-label {
-  width: 175px;
+*:focus {
+  outline: none;
 }

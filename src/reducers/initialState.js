@@ -16,10 +16,16 @@ export default {
     },
   },
   weather: {
-    weatherData: {},
+    weatherData: {
+      list: [],
+      lastUpdatedAt: 0,
+    },
     loading: false,
     error: false,
-    dayWiseWeather: [],
+    errorData: {
+      message: '',
+    },
+    dayWiseWeather: {},
   },
   ui: {
     date: '',

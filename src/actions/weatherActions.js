@@ -3,7 +3,7 @@ import { getWeatherForecast } from '../utils/api';
 
 // thunk for all fetching data
 export const fetchWeather = (city) => {
-  return function (dispatch, getState) {
+  return async (dispatch, getState) => {
     const { ui } = getState();
     dispatch(fetchWeatherBegin());
     getWeatherForecast(city, ui.units).then(
@@ -16,15 +16,15 @@ export const fetchWeather = (city) => {
 };
 
 export const fetchWeatherBegin = () => ({
-  type: types.FETCH_WEATHER_BEGIN,
+  type: types.WEATHER_FETCH_BEGIN,
 });
 
 export const fetchWeatherSuccess = (weatherData) => ({
-  type: types.FETCH_WEATHER_SUCCESS,
+  type: types.WEATHER_FETCH_SUCCESS,
   payload: { weatherData },
 });
 
 export const fetchWeatherFailure = (error) => ({
-  type: types.FETCH_WEATHER_FAILURE,
+  type: types.WEATHER_FETCH_FAILURE,
   payload: { error },
 });

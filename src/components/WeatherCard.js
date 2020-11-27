@@ -6,9 +6,7 @@ import { UOM } from '../utils/units';
 import { weatherProp } from '../types';
 export const WeatherCard = (props) => {
   const { weather, system } = props;
-  if (!weather) {
-    return null;
-  }
+
   const {
     dt,
     main,

@@ -3,16 +3,16 @@ import { shallow, mount } from 'enzyme';
 import CityHeader from './CityHeader';
 
 describe('<CityHeader />', () => {
-  it('Should display city name and country code', () => {
-    const city = {
-      name: 'Chennai',
-      country: 'IN',
-      sunrise: 1606264962,
-      sunset: 1606306171,
-    };
-    const refresh = jest.fn();
-    const lastUpdatedAt = 1606300611;
+  const city = {
+    name: 'Chennai',
+    country: 'IN',
+    sunrise: 1606264962,
+    sunset: 1606306171,
+  };
+  const refresh = jest.fn();
+  const lastUpdatedAt = 1606300611;
 
+  it('Should display city name and country code', () => {
     const wrapper = shallow(
       <CityHeader city={city} refresh={refresh} lastUpdatedAt={lastUpdatedAt} />
     );
@@ -21,15 +21,6 @@ describe('<CityHeader />', () => {
   });
 
   it('Should display last updated at', () => {
-    const city = {
-      name: 'Chennai',
-      country: 'IN',
-      sunrise: 1606264962,
-      sunset: 1606306171,
-    };
-    const refresh = jest.fn();
-    const lastUpdatedAt = 1606300611;
-
     const wrapper = shallow(
       <CityHeader city={city} refresh={refresh} lastUpdatedAt={lastUpdatedAt} />
     );
@@ -38,15 +29,6 @@ describe('<CityHeader />', () => {
   });
 
   it('Should display sunrise and sunset', () => {
-    const city = {
-      name: 'Chennai',
-      country: 'IN',
-      sunrise: 1606264962,
-      sunset: 1606306171,
-    };
-    const refresh = jest.fn();
-    const lastUpdatedAt = 1606300611;
-
     const wrapper = shallow(
       <CityHeader city={city} refresh={refresh} lastUpdatedAt={lastUpdatedAt} />
     );
@@ -55,15 +37,6 @@ describe('<CityHeader />', () => {
   });
 
   it('Should call refresh fn when clicking refresh', () => {
-    const city = {
-      name: 'Chennai',
-      country: 'IN',
-      sunrise: 1606264962,
-      sunset: 1606306171,
-    };
-    const refresh = jest.fn();
-    const lastUpdatedAt = 1606300611;
-
     const wrapper = mount(
       <CityHeader city={city} refresh={refresh} lastUpdatedAt={lastUpdatedAt} />
     );

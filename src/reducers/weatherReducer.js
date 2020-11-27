@@ -1,17 +1,17 @@
 import {
-  FETCH_WEATHER_BEGIN,
-  FETCH_WEATHER_FAILURE,
-  FETCH_WEATHER_SUCCESS,
+  WEATHER_FETCH_BEGIN,
+  WEATHER_FETCH_FAILURE,
+  WEATHER_FETCH_SUCCESS,
 } from '../constants/actionTypes';
 
 import initialState from './initialState';
 import { groupBy } from 'lodash';
 import { getFormattedDateFromTS } from '../utils/dates';
-export default function weatherReducer(state = initialState.weather, action) {
+const weatherReducer = (state = initialState.weather, action) => {
   switch (action.type) {
-    case FETCH_WEATHER_BEGIN:
+    case WEATHER_FETCH_BEGIN:
       return { ...state, loading: true, error: false };
-    case FETCH_WEATHER_SUCCESS: {
+    case WEATHER_FETCH_SUCCESS: {
       const dayWiseWeather = groupBy(action.payload.weatherData.list, (w) =>
         getFormattedDateFromTS(w.dt, 'LL')
       );
@@ -27,10 +27,17 @@ export default function weatherReducer(state = initialState.weather, action) {
       };
     }
 
-    case FETCH_WEATHER_FAILURE:
-      return { ...state, loading: false, error: action.payload.error };
+    case WEATHER_FETCH_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        error: true,
+        errorData: action.payload.error,
+      };
 
     default:
       return state;
   }
-}
+};
+
+export default weatherReducer;

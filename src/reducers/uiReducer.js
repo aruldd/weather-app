@@ -1,7 +1,7 @@
 import { UI_SET_DATE, UI_SET_UNITS } from '../constants/actionTypes';
 import initialState from './initialState';
 
-export default function uiReducer(state = initialState.ui, action) {
+const uiReducer = (state = initialState.ui, action) => {
   switch (action.type) {
     case UI_SET_DATE:
       return { ...state, date: action.payload.date };
@@ -10,4 +10,6 @@ export default function uiReducer(state = initialState.ui, action) {
     default:
       return state;
   }
-}
+};
+
+export default uiReducer;

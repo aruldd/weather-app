@@ -1,6 +1,6 @@
 import * as types from '../constants/actionTypes';
 
-export const setUnit = (units) => ({
+export const setUnits = (units) => ({
   type: types.UI_SET_UNITS,
   payload: { units },
 });

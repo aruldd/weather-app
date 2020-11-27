@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideBar /> should match snapshot 1`] = `
+<div
+  className="sidebar"
+>
+  <input
+    className="bp3-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder="Search City"
+    type="text"
+    value=""
+  />
+  <div
+    className="bp3-button-group bp3-fill"
+    id="unit-selector"
+  >
+    <button
+      className="bp3-button bp3-active"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="bp3-button-text"
+      >
+        Metric
+      </span>
+    </button>
+    <button
+      className="bp3-button"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="bp3-button-text"
+      >
+        Imperial
+      </span>
+    </button>
+  </div>
+  <div
+    className="bp3-button-group bp3-fill bp3-vertical"
+    id="date-selection"
+  />
+</div>
+`;
+
+exports[`<SideBar /> should match snapshot when data is present 1`] = `
+<div
+  className="sidebar"
+>
+  <input
+    className="bp3-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder="Search City"
+    type="text"
+    value=""
+  />
+  <div
+    className="city-header"
+  >
+    <h2
+      className="city-name"
+    >
+      <span>
+        Hosūr
+        , 
+        IN
+         
+      </span>
+      <button
+        className="bp3-button bp3-minimal"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          className="bp3-icon bp3-icon-refresh"
+          icon="refresh"
+        >
+          <svg
+            data-icon="refresh"
+            height={16}
+            viewBox="0 0 16 16"
+            width={16}
+          >
+            <desc>
+              refresh
+            </desc>
+            <path
+              d="M14.99 6.99c-.55 0-1 .45-1 1 0 3.31-2.69 6-6 6-1.77 0-3.36-.78-4.46-2h1.46c.55 0 1-.45 1-1s-.45-1-1-1h-4c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-1.74a7.95 7.95 0 006 2.74c4.42 0 8-3.58 8-8 0-.55-.45-1-1-1zm0-7c-.55 0-1 .45-1 1v1.74a7.95 7.95 0 00-6-2.74c-4.42 0-8 3.58-8 8 0 .55.45 1 1 1s1-.45 1-1c0-3.31 2.69-6 6-6 1.77 0 3.36.78 4.46 2h-1.46c-.55 0-1 .45-1 1s.45 1 1 1h4c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </span>
+      </button>
+    </h2>
+    <div
+      className="city-meta"
+    >
+      Sunrise: 
+      6:22 AM
+       | Sunset:
+       
+      5:50 PM
+       
+    </div>
+    <div
+      className="bp3-text-muted"
+    >
+      Last updated at 
+      12:35 PM
+    </div>
+  </div>
+  <div
+    className="bp3-button-group bp3-fill"
+    id="unit-selector"
+  >
+    <button
+      className="bp3-button bp3-active"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="bp3-button-text"
+      >
+        Metric
+      </span>
+    </button>
+    <button
+      className="bp3-button"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="bp3-button-text"
+      >
+        Imperial
+      </span>
+    </button>
+  </div>
+  <div
+    className="bp3-button-group bp3-fill bp3-vertical"
+    id="date-selection"
+  >
+    <button
+      className="bp3-button bp3-active"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="bp3-button-text"
+      >
+        November 26, 2020
+      </span>
+    </button>
+    <button
+      className="bp3-button"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="bp3-button-text"
+      >
+        November 27, 2020
+      </span>
+    </button>
+    <button
+      className="bp3-button"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="bp3-button-text"
+      >
+        November 28, 2020
+      </span>
+    </button>
+    <button
+      className="bp3-button"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="bp3-button-text"
+      >
+        November 29, 2020
+      </span>
+    </button>
+    <button
+      className="bp3-button"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="bp3-button-text"
+      >
+        November 30, 2020
+      </span>
+    </button>
+    <button
+      className="bp3-button"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="bp3-button-text"
+      >
+        December 1, 2020
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<SideBar /> should match snapshot when no data is present 1`] = `
+<div
+  className="sidebar"
+>
+  <input
+    className="bp3-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder="Search City"
+    type="text"
+    value=""
+  />
+  <div
+    className="bp3-button-group bp3-fill"
+    id="unit-selector"
+  >
+    <button
+      className="bp3-button bp3-active"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="bp3-button-text"
+      >
+        Metric
+      </span>
+    </button>
+    <button
+      className="bp3-button"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="bp3-button-text"
+      >
+        Imperial
+      </span>
+    </button>
+  </div>
+  <div
+    className="bp3-button-group bp3-fill bp3-vertical"
+    id="date-selection"
+  />
+</div>
+`;

@@ -1,15 +1,14 @@
 import { Button, ButtonGroup, Callout, Icon, Spinner } from '@blueprintjs/core';
-import { debounce, keys, upperFirst } from 'lodash';
+import { keys, upperFirst } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { DebounceInput } from 'react-debounce-input';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { useDebounce } from 'use-debounce';
 import * as uiActions from '../actions/uiActions';
 import * as actions from '../actions/weatherActions';
 import { cityProp, weatherProp } from '../types';
 import CityHeader from './CityHeader';
-
 export const SideBar = (props) => {
   const {
     actions,
@@ -21,20 +20,19 @@ export const SideBar = (props) => {
     ui,
     uiActions,
   } = props;
-
+  const [city, setCity] = useState('hosur');
+  const [debouncedCity] = useDebounce(city, 300);
   useEffect(() => {
-    actions.fetchWeather('hosur');
-  }, []);
+    actions.fetchWeather(debouncedCity);
+  }, [debouncedCity]);
 
   const { city: cityData, lastUpdatedAt } = weatherData;
 
   return (
     <div className="sidebar">
-      <DebounceInput
-        minLength={2}
-        debounceTimeout={300}
+      <input
         className="bp3-input"
-        onChange={(e) => actions.fetchWeather(e.target.value)}
+        onChange={(e) => setCity(e.target.value)}
         placeholder="Search City"
       />
 

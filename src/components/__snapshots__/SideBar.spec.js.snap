@@ -1,70 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SideBar /> should match snapshot 1`] = `
-<div
-  className="sidebar"
->
-  <input
-    className="bp3-input"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder="Search City"
-    type="text"
-    value=""
-  />
-  <div
-    className="bp3-button-group bp3-fill"
-    id="unit-selector"
-  >
-    <button
-      className="bp3-button bp3-active"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      type="button"
-    >
-      <span
-        className="bp3-button-text"
-      >
-        Metric
-      </span>
-    </button>
-    <button
-      className="bp3-button"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      type="button"
-    >
-      <span
-        className="bp3-button-text"
-      >
-        Imperial
-      </span>
-    </button>
-  </div>
-  <div
-    className="bp3-button-group bp3-fill bp3-vertical"
-    id="date-selection"
-  />
-</div>
-`;
-
 exports[`<SideBar /> should match snapshot when data is present 1`] = `
 <div
   className="sidebar"
 >
   <input
     className="bp3-input"
-    onBlur={[Function]}
     onChange={[Function]}
-    onKeyDown={[Function]}
     placeholder="Search City"
-    type="text"
-    value=""
   />
   <div
     className="city-header"
@@ -255,12 +198,8 @@ exports[`<SideBar /> should match snapshot when no data is present 1`] = `
 >
   <input
     className="bp3-input"
-    onBlur={[Function]}
     onChange={[Function]}
-    onKeyDown={[Function]}
     placeholder="Search City"
-    type="text"
-    value=""
   />
   <div
     className="bp3-button-group bp3-fill"

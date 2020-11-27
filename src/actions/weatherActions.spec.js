@@ -1,7 +1,7 @@
 import * as ActionTypes from '../constants/actionTypes';
+import { getWeatherForecast } from '../utils/api';
 import * as ActionCreators from './weatherActions';
 jest.mock('../utils/api');
-import { getWeatherForecast } from '../utils/api';
 
 describe('Actions', () => {
   const expectedBegin = {
@@ -32,7 +32,7 @@ describe('Actions', () => {
   });
   it('should call the actions for fetching weather and return data if success', async () => {
     const dispatch = jest.fn();
-    const returnValue = new Promise((resolve, reject) => {
+    const returnValue = new Promise((resolve) => {
       resolve({});
     });
     const getState = () => {

@@ -1,7 +1,6 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import WeatherCard from './WeatherCard';
 import { create } from 'react-test-renderer';
+import { WeatherCard } from './WeatherCard';
 
 describe('<WeatherCard />', () => {
   const weather = {

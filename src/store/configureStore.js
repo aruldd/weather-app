@@ -19,6 +19,8 @@ const configureStoreProd = (initialState) => {
   );
 };
 
+// Ignoring development store
+/* istanbul ignore next */
 const configureStoreDev = (initialState) => {
   const reactRouterMiddleware = routerMiddleware(history);
   const middlewares = [
@@ -35,6 +37,7 @@ const configureStoreDev = (initialState) => {
     composeEnhancers(applyMiddleware(...middlewares))
   );
 
+  // Ignoring the HMR branch from testing
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
     module.hot.accept('../reducers', () => {
@@ -47,7 +50,7 @@ const configureStoreDev = (initialState) => {
 };
 
 const configureStore =
-  process.env.NODE_ENV === 'production'
+  process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test'
     ? configureStoreProd
     : configureStoreDev;
 

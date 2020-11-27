@@ -1,13 +1,13 @@
+import { Callout, Spinner } from '@blueprintjs/core';
+import { mount, shallow } from 'enzyme';
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import ConnectedSideBar, { SideBar } from './SideBar';
-import CityHeader from './CityHeader';
-import initialState from '../reducers/initialState';
+import { Provider } from 'react-redux';
 import { create } from 'react-test-renderer';
 import configureMockStore from 'redux-mock-store';
-import { Provider } from 'react-redux';
-import { Spinner, Callout } from '@blueprintjs/core';
-import DebounceInput from 'react-debounce-input';
+import initialState from '../reducers/initialState';
+import CityHeader from './CityHeader';
+import ConnectedSideBar, { SideBar } from './SideBar';
+
 describe('<SideBar />', () => {
   const actions = { fetchWeather: jest.fn() };
 
@@ -2998,7 +2998,7 @@ describe('<SideBar />', () => {
     expect(wrapper.find(Callout)).not.toExist();
   });
   it('Should fetch weather when initializing', () => {
-    const wrapper = shallow(
+    shallow(
       <SideBar
         actions={actions}
         loading={loading}
@@ -3011,6 +3011,27 @@ describe('<SideBar />', () => {
       />
     );
     expect(actions.fetchWeather).toBeCalled();
+  });
+  it('Should search when input is changes', () => {
+    const wrapper = mount(
+      <SideBar
+        actions={actions}
+        loading={loading}
+        weatherData={weatherData}
+        error={error}
+        errorData={errorData}
+        dayWiseWeather={dayWiseWeather}
+        ui={ui}
+        uiActions={uiActions}
+      />
+    );
+    wrapper
+      .find('input')
+      .first()
+      .simulate('change', { target: { value: 'chennai' } });
+    setTimeout(() => {
+      expect(actions.fetchWeather).toBeCalledWith('chennai');
+    }, 500);
   });
   it('Should change unit', () => {
     const wrapper = mount(
